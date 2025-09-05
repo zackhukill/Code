@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Southeast Nebraska Fishing Survey</title>
+    <link rel="stylesheet" href="fishing-survey.css">
+</head>
+<body>
+    <div style="text-align:center; margin-top:32px;">
+    <img src="watermap.png" alt="Nebraska Water Map" style="max-width:25%; height:auto; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+    </div>
+    <form class="survey-form">
+        <h2>Southeast Nebraska Fishing Survey</h2>
+        
+        <!-- Text field -->
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        
+        <!-- Dropdown list -->
+        <label for="location">Favorite Fishing Location:</label>
+        <select id="location" name="location" required>
+            <option value="">Select a location</option>
+            <option value="holmeslake">Holmes Lake</option>
+            <option value="walnutcreek">Walnut Creek</option>
+            <option value="twinlakes">Twin Lakes</option>
+            <option value="conestoga">Lake Conestoga</option>
+            <option value="doanelake">Doane Lake</option>
+        </select>
+        <br><br>
+        
+        <!-- Radio buttons -->
+        <label>How often do you go fishing?</label><br>
+        <input type="radio" id="often1" name="frequency" value="weekly" required>
+        <label for="often1">Weekly</label>
+        <input type="radio" id="often2" name="frequency" value="monthly">
+        <label for="often2">Monthly</label>
+        <input type="radio" id="often3" name="frequency" value="rarely">
+        <label for="often3">Rarely</label>
+        <br><br>
+        
+        <!-- Checkboxes -->
+        <label>What do you fish for? (Select all that apply)</label><br>
+        <input type="checkbox" id="fish1" name="fish[]" value="bass">
+        <label for="fish1">Bass</label>
+        <input type="checkbox" id="fish2" name="fish[]" value="carp">
+        <label for="fish2">Carp</label>
+        <input type="checkbox" id="fish3" name="fish[]" value="perch">
+        <label for="fish3">Perch</label>
+        <input type="checkbox" id="fish4" name="fish[]" value="catfish">
+        <label for="fish4">Catfish</label>
+        <input type="checkbox" id="fish5" name="fish[]" value="bluegill">
+        <label for="fish5">Bluegill</label>
+        <input type="checkbox" id="fish6" name="fish[]" value="crappie">
+        <label for="fish6">Crappie</label>
+        <br><br>
+        
+        <!-- Text area -->
+        <label for="comments">Share your favorite fishing story:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="40" required></textarea>
+        <br><br>
+        
+        <button type="submit">Submit Survey</button>
+    </form>
+</body>
+</html>

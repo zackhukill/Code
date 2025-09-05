@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Flexbox Example</title>
+    <link rel="stylesheet" href="flexbox.css">
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-cell">
+            <a href="https://www.example.com" target="_blank" rel="noopener">Visit Example.com</a>
+        </div>
+        <div class="flex-cell">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png" alt="Transparent PNG Example" style="max-width:100%;height:auto;">
+        </div>
+        <div class="flex-cell">
+            <iframe width="1047" height="589" src="https://www.youtube.com/embed/zxB24tsJxzo" title="Corey Seager TIES WORLD SERIES GAME 1 with a 9th-inning homer!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="flex-cell" id="geo-cell">
+            <button onclick="getLocation()">Show My Location</button>
+            <p id="location-result">Location will appear here.</p>
+        </div>
+    </div>
+    <script>
+    function getLocation() {
+        const result = document.getElementById('location-result');
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    result.textContent = `Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`;
+                },
+                (error) => {
+                    result.textContent = 'Unable to retrieve your location.';
+                }
+            );
+        } else {
+            result.textContent = 'Geolocation is not supported by this browser.';
+        }
+    }
+    </script>
+</body>
+</html>
